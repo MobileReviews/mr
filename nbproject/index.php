@@ -4,6 +4,6 @@
   <title>Home page</title>
  </head>
  <body>
- <?php echo '<p>labas</p>'; ?> 
+ <?php echo '<p>labas!</p>'; ?> 
  </body>
 </html>
