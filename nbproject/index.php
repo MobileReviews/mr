@@ -4,6 +4,6 @@
   <title>Home page</title>
  </head>
  <body>
- <?php echo '<p>Pushinu!!!!</p>'; ?> 
+ <?php echo '<p>Pushinu</p>'; ?> 
  </body>
 </html>
