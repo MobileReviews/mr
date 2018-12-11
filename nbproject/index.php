@@ -4,6 +4,6 @@
   <title>Home page</title>
  </head>
  <body>
- <?php echo '<p>Priviet pasauli!</p>'; ?> 
+ <?php echo '<p>Priviet pasauli!???????????/</p>'; ?> 
  </body>
 </html>
