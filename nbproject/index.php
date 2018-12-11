@@ -4,6 +4,6 @@
   <title>Home page</title>
  </head>
  <body>
- <?php echo '<p>Pakeitimai</p>'; ?> 
+ <?php echo '<p>Pakeiciu viska</p>'; ?> 
  </body>
 </html>
