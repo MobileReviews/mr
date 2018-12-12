@@ -54,7 +54,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     // Bind result variables
                     mysqli_stmt_bind_result($stmt, $id, $username, $hashed_password, $admin);
                     if(mysqli_stmt_fetch($stmt)){
-                        if(password_verify($password, $hashed_password) && $admin == "true"){
+                        if(password_verify($password, $hashed_password)){
                             // Password is correct, so start a new session
                             session_start();
                             
@@ -62,7 +62,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["loggedin"] = true;
                             $_SESSION["id"] = $id;
                             $_SESSION["username"] = $username;                            
-                            
+                            $_SESSION["admin"] = $admin;
                             
                             // Redirect user to welcome page
                             header("location: welcome.php");
