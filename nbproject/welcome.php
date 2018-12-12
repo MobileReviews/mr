@@ -1,4 +1,5 @@
 <?php
+require_once "config.php";
 // Initialize the session
 session_start();
  
@@ -27,5 +28,26 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <a href="reset-password.php" class="btn btn-warning">Reset Your Password</a>
         <a href="logout.php" class="btn btn-danger">Sign Out of Your Account</a>
     </p>
+    
+    
+    <?php
+    $sql = "SELECT * FROM brands";
+    $result = mysqli_query($link, $sql);
+ //   echo '<div style="width: 80%;  margin:0 auto; text-align: center">';
+    while($row = mysqli_fetch_assoc($result)) {
+        $idBrand = $row['id'];
+        $nameBrand = $row['brand_name'];
+//        echo '<div class="paveiksliukai" style="margin: 10px">';
+//        echo '<img  src="data:image/jpeg;base64,'.base64_encode( $row['paveiksliukas'] ).'" class="image" />';
+//        echo '  <div class="middle"><div class="text">'.$namer.'</div></div>';
+        echo $nameBrand;
+        echo '<a href="models.php?id='.$idBrand.'"  style="text-decoration:none;" class="btn btn-primary btn-block btn-large" >Read More</a>';
+//        echo '</div>';
+    }
+//    echo '</div>';
+    ?>
+    
+    
+    
 </body>
 </html>
