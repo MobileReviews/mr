@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <title>Welcome</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
-    <style type="text/css">
-        body{ font: 14px sans-serif; text-align: center; }
-    </style>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 
@@ -21,7 +19,7 @@ echo "<h1>Models</h1>";
         $idModel = $row['id'];
         $nameModel = $row['model_name'];
         echo $nameModel;
-        echo '<a href="review.php?id='.$idModel.'"  style="text-decoration:none;" class="btn btn-primary btn-block btn-large" >Read Review</a>';
+        echo '<a href="review.php?id='.$idModel.'" class="btn btn-primary btn-block btn-large buttons" >Read Review</a>';
     }
     ?>
 </body>
