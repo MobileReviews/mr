@@ -9,10 +9,14 @@
 <body>
 
 <?php
+session_start();
 require_once "config.php";
-echo "<h1>Models</h1>";
-
     $submited_id = $_GET['id'];
+    $submited_branName = $_GET['brandName'];
+
+echo "<h1>$submited_branName Models</h1>";
+
+
     $sql = "SELECT * FROM models WHERE brand_id = ".$submited_id.";";
     $result = mysqli_query($link, $sql);
     while($row = mysqli_fetch_assoc($result)) {
