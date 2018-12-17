@@ -16,17 +16,16 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <meta charset="UTF-8">
     <title>Welcome</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+    <?php $navigation = include_once "navigation.php";
+      echo $navigation;?>
+    
     <div class="page-header">
         <h1>Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); if($_SESSION["admin"] == "true") echo '<p>You are ADMIN</p>'; ?></b>. Welcome to our site.</h1>
-    </div>
-    <p>
-        <a href="reset-password.php" class="btn btn-warning">Reset Your Password</a>
-        <a href="logout.php" class="btn btn-danger">Sign Out of Your Account</a>
-    </p>
-    
+    </div>  
     
     <?php
     $sql = "SELECT * FROM brands";
@@ -39,7 +38,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 //        echo '<div class="paveiksliukai" style="margin: 10px">';
 //        echo '<img  src="data:image/jpeg;base64,'.base64_encode( $row['paveiksliukas'] ).'" class="image" />';
 //        echo '  <div class="middle"><div class="text">'.$namer.'</div></div>';
-        echo "<img src='$image'>";
+        echo "<img class = 'brandsLogo' src='$image'>";
         echo $nameBrand;
         echo '<a href="models.php?id='.$idBrand.'" class="btn btn-primary btn-block btn-large buttons" >Read More</a>';
 //        echo '</div>';
