@@ -81,22 +81,23 @@ ul li a:hover {
 
 .col-sm-4 {
     margin-bottom: 40px;
+    padding: 30px 0px 30px 0px;
 }
 
 /* Image Overlay */
 .imagebox {
-  position: relative;
+  margin:0 auto;
   width: 50%;
 }
 
 .overlay {
   position: absolute;
-  top: 0;
+  top: 5%;
   bottom: 0;
-  left: 0;
+  left: 25%;
   right: 0;
   height: 100%;
-  width: 100%;
+  width: 50%;
   opacity: 0;
   transition: .5s ease;
   background-color: #008CBA;
