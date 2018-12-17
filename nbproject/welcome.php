@@ -40,7 +40,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 //        echo '  <div class="middle"><div class="text">'.$namer.'</div></div>';
         echo $nameBrand;
         echo '<a href="models.php?id='.$idBrand.'" class="btn btn-primary btn-block btn-large buttons" >Read More</a>';
-
 //        echo '</div>';
     }
 //    echo '</div>';
