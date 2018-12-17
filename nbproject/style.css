@@ -103,7 +103,7 @@ ul li a:hover {
 }
 
 .imagebox:hover .overlay {
-  opacity: 1;
+  opacity: 0.9;
 }
 
 .text {
@@ -116,4 +116,5 @@ ul li a:hover {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
+  opacity: 1;
 }
