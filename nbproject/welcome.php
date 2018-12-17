@@ -22,11 +22,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <body>
     <?php $navigation = include_once "navigation.php";
       echo $navigation;?>
-    
-    <div class="page-header">
-        <h1>Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); if($_SESSION["admin"] == "true") echo '<p>You are ADMIN</p>'; ?></b>. Welcome to our site.</h1>
-    </div>  
-    
     <?php
     $sql = "SELECT * FROM brands";
     $result = mysqli_query($link, $sql);
@@ -38,9 +33,18 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 //        echo '<div class="paveiksliukai" style="margin: 10px">';
 //        echo '<img  src="data:image/jpeg;base64,'.base64_encode( $row['paveiksliukas'] ).'" class="image" />';
 //        echo '  <div class="middle"><div class="text">'.$namer.'</div></div>';
-        echo "<img class = 'brandsLogo' src='$image'>";
-        echo $nameBrand;
-        echo '<a href="models.php?id='.$idBrand.'" class="btn btn-primary btn-block btn-large buttons" >Read More</a>';
+        echo "<div class='col-sm-4'>";
+            echo "<div class='imagebox'>";
+                echo "<img class = 'brandsLogo' src='$image'>";
+                    echo "<div class='overlay'>";
+                        echo '<a href="models.php?id='.$idBrand.'" class="text" >$nameBrand</a>';
+                    echo "</div>";
+//        echo '<a href="models.php?id='.$idBrand.'" class="btn btn-primary btn-block btn-large buttons" >Read More</a>';
+                   
+            echo "</div>";
+        echo "</div>";
+
+
 //        echo '</div>';
     }
 //    echo '</div>';
