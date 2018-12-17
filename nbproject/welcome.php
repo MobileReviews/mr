@@ -35,9 +35,11 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     while($row = mysqli_fetch_assoc($result)) {
         $idBrand = $row['id'];
         $nameBrand = $row['brand_name'];
+        $image = $row['image'];
 //        echo '<div class="paveiksliukai" style="margin: 10px">';
 //        echo '<img  src="data:image/jpeg;base64,'.base64_encode( $row['paveiksliukas'] ).'" class="image" />';
 //        echo '  <div class="middle"><div class="text">'.$namer.'</div></div>';
+        echo "<img src='$image'>";
         echo $nameBrand;
         echo '<a href="models.php?id='.$idBrand.'" class="btn btn-primary btn-block btn-large buttons" >Read More</a>';
 //        echo '</div>';
