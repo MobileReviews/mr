@@ -37,7 +37,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             echo "<div class='imagebox'>";
                 echo "<img class = 'brandsLogo' src='$image'>";
                     echo "<div class='overlay'>";
-                        echo '<a href="models.php?id='.$idBrand.'&brandName='.urlencode($nameBrand).'" class="text" style="text-decoration:none;" >'.$nameBrand.'</a>';
+                        echo '<a href="models.php?id='.$idBrand.'&brandName='.urlencode($nameBrand).'" class="text">'.$nameBrand.'</a>';
                     echo "</div>";
 //        echo '<a href="models.php?id='.$idBrand.'" class="btn btn-primary btn-block btn-large buttons" >Read More</a>';
                    
