@@ -30,7 +30,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
     $sql = "SELECT * FROM brands";
     $result = mysqli_query($link, $sql);
- //   echo '<div style="width: 80%;  margin:0 auto; text-align: center">';
+    
     $index = 3;
     $index2 = 1;
     while($row = mysqli_fetch_assoc($result)) {
@@ -38,12 +38,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         $nameBrand = $row['brand_name'];
         $image = $row['image'];
         
-//        echo '<div class="paveiksliukai" style="margin: 10px">';
-//        echo '<img  src="data:image/jpeg;base64,'.base64_encode( $row['paveiksliukas'] ).'" class="image" />';
-//        echo '  <div class="middle"><div class="text">'.$namer.'</div></div>';
-
         if($index % 3 == 0){
            echo "<div class='row'>";
+           $rowIsClosed = false;
         }
         else {
             $index2++;
@@ -55,8 +52,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                     echo "<div class='overlay'>";
                         echo '<a href="models.php?id='.$idBrand.'&brandName='.urlencode($nameBrand).'" class="text">'.$nameBrand.'</a>';
                     echo "</div>";
-//        echo '<a href="models.php?id='.$idBrand.'" class="btn btn-primary btn-block btn-large buttons" >Read More</a>';
-                   
             echo "</div>";
         echo "</div>";
         
@@ -65,10 +60,11 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         if($index2 % 3 == 0){
             echo "</div>";
             $index2 = 1;
-        }
-//        echo '</div>';
+            $rowIsClosed = true;
+        } 
     }
-//    echo '</div>';
+    if(!$rowIsClosed)
+     echo "</div>";
     ?>
     
     <?php $footer = include_once "footer.php";
