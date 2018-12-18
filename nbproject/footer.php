@@ -12,7 +12,7 @@ return "
               <a href='https://www.linkedin.com/in/deividas-kacas-b85875173/' target='_blank'><i class='fab fa-linkedin'></i></a> 
               <a href='https://www.facebook.com/deivis.kaa?ref=br_rs' target='_blank'><i class='fab fa-facebook'></i></a> 
               <a href='https://twitter.com/dei_wee' target='_blank'><i class='fab fa-twitter'></i></a> 
-              <a href='https://github.com/SneakyAF' target='_blank'><i class='fab fa-github'></i></a>    
+              <a href='https://github.com/SneakyAF' target='_blank'><i class='fab fa-github'></i></a>     
         </div>
         <div class='col-3 contacts third-col'>
               <i class='fas fa-user-circle'></i><p class='info'>Mantas Antanaitis</p> <br>
