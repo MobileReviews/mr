@@ -21,6 +21,27 @@ html {
     min-height: 100%;
 }
 
+/* GRID */
+.row {
+    width: 100%;
+}
+
+.col-3 {
+    margin: 0 auto;
+    display: inline-block;
+    width: 25%;
+    float: left;
+    padding: 35px 15px;
+}
+
+.col-4 {
+    display: inline-block;
+    margin: 25px 0px;
+    width: 33.3%;
+}
+
+/*********/
+
 .wrapper { 
     width: 350px; 
     padding: 20px;
@@ -48,6 +69,10 @@ ul {
     background-color: #555555;
     padding: 0;
     margin: 0;
+}
+
+.welcometitle {
+    margin-top: 25px;
 }
 
 .logo {
@@ -93,19 +118,6 @@ footer {
     right: 0;
     bottom: 0;
     left: 0;
-}
-
-.row {
-    margin: 0 auto;
-    width: 100%;
-}
-
-.col-3 {
-    margin: 0 auto;
-    display: inline-block;
-    width: 25%;
-    float: left;
-    padding: 35px 15px;
 }
 
 .contacts {
@@ -179,21 +191,23 @@ footer {
 
 /* Image Overlay */
 .imagebox {
-  margin:0 auto;
+  position: relative;
+  margin: 0 auto;
   width: 50%;
+  padding: 15px 0px;
 }
 
 .overlay {
   position: absolute;
-  top: 5%;
+  top: 0;
   bottom: 0;
-  left: 25%;
+  left: 0;
   right: 0;
   height: 100%;
-  width: 50%;
+  width: 100%;
   opacity: 0;
   transition: .5s ease;
-  background-color: #555555;
+  background-color: #555;
 }
 
 .overlay a {
