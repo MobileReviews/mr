@@ -19,9 +19,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <?php $navigation = include_once "navigation.php";
-      echo $navigation;?>
-    <?php
+    <?php 
+    include ("navigation.php");
     
     echo "<div class='row'>";
     echo "<h2 class='welcometitle'>Mobile phone brands</h2>";
