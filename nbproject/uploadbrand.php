@@ -36,7 +36,7 @@ if(isset($_POST["submit"])) {
             else die("Error uploading brand: ". mysqli_error($link));
     } else {
         $_SESSION['uploadError'] = "Error uploading brand picture";
-        echo $_SESSION;
+        echo $_SESSION['uploadError'];
     }
     }
 }
