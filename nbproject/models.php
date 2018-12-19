@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Welcome</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
@@ -19,7 +18,10 @@ require_once "config.php";
     $submited_id = $_GET['id'];
     $submited_branName = $_GET['brandName'];
 
-    echo "<h1>$submited_branName Models</h1>";
+    echo "<div class='row'>";
+    echo "<h2>$submited_branName Models</h2>";
+    echo "</div>";
+    
     $sql = "SELECT * FROM models WHERE brand_id = ".$submited_id.";";
     $result = mysqli_query($link, $sql);
     
@@ -30,7 +32,7 @@ require_once "config.php";
 
             echo "<div class = 'column'>";
                 echo "<div class = 'card'>";
-                    echo "<img src='https://www.cellularishop.com/791-large_default/huawei-p20-black-brand-mono-sim.jpg' alt='Photo'>";
+                    echo "<img class='card-image' src='https://www.cellularishop.com/791-large_default/huawei-p20-black-brand-mono-sim.jpg' alt='Photo'>";
                     echo "<div class = 'cardbox'>";
                         echo "<h3>$nameModel</h3>";
                         echo "<p class='title'>CPU:</p>";
