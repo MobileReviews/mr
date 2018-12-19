@@ -3,7 +3,7 @@ return "
 <footer>
     <div class='row'>
         <div class='col-3 first-col'>
-           <img src='https://i.imgur.com/YGoorZz.png' alt='logo' height='128' width='256'>
+           <img class='footer-logo' src='https://i.imgur.com/YGoorZz.png' alt='logo' height='128' width='256'>
         </div>
         <div class='col-3 contacts second-col'>
               <i class='fas fa-user-circle'></i><p class='info'>Deividas Kacas</p> <br>
