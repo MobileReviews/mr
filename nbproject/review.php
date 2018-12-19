@@ -7,12 +7,11 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<!--Navigacija-->
-    <?php $navigation = include_once "navigation.php";
-      echo $navigation;?>
-<!--**********-->
-<?php
-require_once "config.php";
+    <?php 
+    session_start();
+    include ("navigation.php");
+    
+    require_once "config.php";
 
     echo "<div class='row'>";
     echo "<h2>Review</h2>";

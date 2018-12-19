@@ -7,14 +7,12 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<!--Navigacija-->
-    <?php $navigation = include_once "navigation.php";
-      echo $navigation;?>
-<!--**********-->
+    <?php 
 
-<?php
-session_start();
-require_once "config.php";
+    session_start();
+    include ("navigation.php");
+    
+    require_once "config.php";
     $submited_id = $_GET['id'];
     $submited_branName = $_GET['brandName'];
 

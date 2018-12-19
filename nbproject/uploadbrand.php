@@ -8,10 +8,10 @@
 </head>
 <body> 
 <?php
-  $navigation = include_once "navigation.php";
-  echo $navigation;
+  session_start();
+  include ("navigation.php");
 require_once "config.php";
-session_start();
+
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true
             || $_SESSION["admin"] !== "true"){
     header("location: welcome.php");
