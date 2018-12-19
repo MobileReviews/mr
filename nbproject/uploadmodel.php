@@ -17,7 +17,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true
     exit;
 }
 
-
+echo "<h2>Upload a model</h2>"; 
   
 include 'imagevalidation.php';
 if(isset($_POST["submit"])) {
@@ -45,11 +45,11 @@ if(isset($_POST["submit"])) {
     }
     }
 }
-  $footer = include_once "footer.php";
-  echo $footer;
 ?>   
 <form action="" method="post" enctype="multipart/form-data">
-    <select style="width: 200px" name="brand" required="required">
+    <div class="row">
+        <div class="col-2">
+            <select style="width: 250px" name="brand" required="required">
                                         <?php
                                         $selected = " selected='selected'";
                                         $sql = "SELECT id, brand_name
@@ -60,13 +60,28 @@ if(isset($_POST["submit"])) {
                                             echo "<option value='{$row['id']}'>{$row['brand_name']} </option>";
                                         }
                                         ?>
-     </select>
-    <input type="text" name="model" id="ModelName" required="required" placeholder="Name of a model">
-    <input type="text" name="cpu" id="cpu" required="required" placeholder="CPU">
-    <input type="text" name="ram" id="ram" required="required" placeholder="RAM">
-    <input type="text" name="rom" id="rom" required="required" placeholder="ROM">
-    <input type="file" name="fileToUpload" id="fileToUpload" required="required">
-    <input type="submit" value="Upload brand" name="submit">
+            </select>
+        </div>
+        <div class="col-2">
+            <input type="text" name="model" id="ModelName" required="required" placeholder="Name of a model">
+        </div>
+        <div class="col-2">
+            <input type="text" name="cpu" id="cpu" required="required" placeholder="CPU">
+        </div>
+        <div class="col-2">
+            <input type="text" name="ram" id="ram" required="required" placeholder="RAM">
+        </div>
+        <div class="col-2">
+            <input type="text" name="rom" id="rom" required="required" placeholder="ROM">
+        </div>
+    </div>
+    <input type="file" name="fileToUpload" id="fileToUpload" required="required"> <br>
+    <label for="upload-model" class="custom-submit">
+            <i class="fa fa-cloud-upload"></i> Upload a model
+        </label>
+    <input type="submit" value="Upload model" id="upload-model" name="submit">
 </form>
+        <?php   $footer = include_once "footer.php";
+        echo $footer;?>
 </body>
 </html>
