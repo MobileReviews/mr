@@ -68,6 +68,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     
     <?php $footer = include_once "footer.php";
       echo $footer;?>
-    
+  
 </body>
 </html>
