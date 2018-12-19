@@ -328,15 +328,12 @@ h3 {
   width: 75%;
   padding: 15px 0px;
   margin-top: 15px;
-  
-    position: relative;
 }
 
 .card .card-image {
-    position: relative;
-    top: 0; 
     width: 80%;
-    height: 60%;
+    height: 350px;
+    object-fit: scale-down;
 }
 
 .cardbox {
