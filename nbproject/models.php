@@ -29,15 +29,19 @@ require_once "config.php";
     while($row = mysqli_fetch_assoc($result)) {
         $idModel = $row['id'];
         $nameModel = $row['model_name'];
+        $cpu = $row['CPU'];
+        $ram = $row['RAM'];
+        $rom = $row['ROM'];
+        $modelImage = $row['modelimage'];
 
             echo "<div class = 'column'>";
                 echo "<div class = 'card'>";
-                    echo "<img class='card-image' src='https://www.cellularishop.com/791-large_default/huawei-p20-black-brand-mono-sim.jpg' alt='Photo'>";
+                    echo "<img class='card-image' src='$modelImage' alt='Photo'>";
                     echo "<div class = 'cardbox'>";
                         echo "<h3>$nameModel</h3>";
-                        echo "<p class='title'>CPU:</p>";
-                        echo "<p>RAM:</p>";
-                        echo "<p>Camera:</p>";
+                        echo "<p class='title'>CPU: $cpu</p>";
+                        echo "<p>RAM: $ram</p>";
+                        echo "<p>ROM: $rom</p>";
                         echo '<a href="review.php?id='.$idModel.'" class="button" >Read Review</a>';
                     echo "</div>";    
                 echo "</div>";    
