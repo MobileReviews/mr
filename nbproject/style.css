@@ -378,3 +378,71 @@ h3 {
     height: 40%;
 }
 /*******************/
+
+/* ADMIN BUTTONS */
+.butn{
+  border: 1px solid #555;
+  background: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-family: sans-serif;
+  cursor: pointer;
+  margin: 10px;
+  transition: 0.8s;
+  position: relative;
+  overflow: hidden;
+  height: 160px;
+}
+.butn1,.butn2{
+  color: #555;
+}
+.butn3,.butn4{
+  color: #f4f4f4;
+}
+.butn1:hover,.butn2:hover{
+  color: #f4f4f4;
+}
+.butn3:hover,.butn4:hover{
+  color: #555;
+}
+.butn::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: #555;
+  z-index: -1;
+  transition: 0.8s;
+}
+.butn1::before,.butn3::before{
+  top: 0;
+  border-radius: 0 0 50% 50%;
+}
+.butn2::before,.butn4::before{
+  bottom: 0;
+  border-radius: 50% 50% 0 0;
+}
+.butn3::before,.butn4::before{
+  height: 180%;
+}
+.butn1:hover::before,.butn2:hover::before{
+  height: 180%;
+}
+.butn3:hover::before,.butn4:hover::before{
+  height: 0%;
+}
+
+.col-buttons {
+    display: inline-block;
+    width: 33%;
+    margin-top: 70px;
+}
+
+@media screen and (max-width: 768px) {
+  .col-buttons {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+/*******************/

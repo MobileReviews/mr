@@ -40,8 +40,7 @@ if(isset($_POST["submit"])) {
     }
     }
 }
-  $footer = include_once "footer.php";
-  echo $footer;
+  
 ?>   
 <form action="" method="post" enctype="multipart/form-data">
     Select image to upload:
@@ -49,5 +48,7 @@ if(isset($_POST["submit"])) {
     <input type="text" name="brand" id="brandName" required="required" placeholder="Name of a brand">
     <input type="submit" value="Upload brand" name="submit">
 </form>
+    <?php $footer = include_once "footer.php";
+      echo $footer; ?>
 </body>
 </html>
