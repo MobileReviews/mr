@@ -77,7 +77,7 @@ if(isset($_POST["submit"])) {
     </div>
     <input type="file" name="fileToUpload" id="fileToUpload" required="required"> <br>
     <label for="upload-model" class="custom-submit">
-            <i class="fa fa-cloud-upload"></i> Upload a model
+            Upload a model
         </label>
     <input type="submit" value="Upload model" id="upload-model" name="submit">
 </form>

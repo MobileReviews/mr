@@ -56,7 +56,7 @@ if(isset($_POST["submit"])) {
     </div>
     <div class="row">
         <label for="submit-button" class="custom-submit">
-            <i class="fa fa-cloud-upload"></i> Upload a brand
+            Upload a brand
         </label>
         <input type="submit" value="Upload brand" id="submit-button" name="submit">
     </div>

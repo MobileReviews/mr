@@ -122,8 +122,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <span class="help-block"><?php echo $confirm_password_err; ?></span>
             </div>
             <div class="form-group">
-                <input type="submit" class="btn btn-primary" value="Submit">
-                <input type="reset" class="btn btn-default" value="Reset">
+                <label for="register-button" class="custom-submit">
+                    Submit
+                </label>
+                <input type="submit" class="btn btn-primary" id="register-button" value="Submit">
+                <label for="resetfields-button" class="custom-submit2">
+                    Reset
+                </label>
+                <input type="reset" class="btn btn-default" id="resetfields-button" value="Reset">
             </div>
             <p>Already have an account? <a href="login.php">Login here</a>.</p>
         </form>

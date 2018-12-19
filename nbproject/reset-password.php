@@ -94,7 +94,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <span class="help-block"><?php echo $confirm_password_err; ?></span>
             </div>
             <div class="form-group">
-                <input type="submit" class="btn btn-primary" value="Submit">
+                <label for="reset-button" class="custom-submit">
+                    Submit
+                </label>
+                <input type="submit" class="btn btn-primary" id="reset-button" value="Submit">
                 <a class="btn btn-link" href="welcome.php">Cancel</a>
             </div>
         </form>
