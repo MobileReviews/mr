@@ -23,7 +23,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     include ("navigation.php");
     
     echo "<div class='row'>";
-    echo "<h2 class='welcometitle'>Mobile phone brands</h2>";
+    echo "<h2 class='welcometitle'>Pick a brand</h2>";
     echo "</div>";
 
     $sql = "SELECT * FROM brands";
