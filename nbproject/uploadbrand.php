@@ -18,7 +18,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true
     exit;
 }
 
-
+echo "<h2>Upload a brand</h2>"; 
   
 include 'imagevalidation.php';
 if(isset($_POST["submit"])) {
@@ -43,10 +43,23 @@ if(isset($_POST["submit"])) {
   
 ?>   
 <form action="" method="post" enctype="multipart/form-data">
-    Select image to upload:
-    <input type="file" name="fileToUpload" id="fileToUpload" required="required">
-    <input type="text" name="brand" id="brandName" required="required" placeholder="Name of a brand">
-    <input type="submit" value="Upload brand" name="submit">
+    
+    <div class="row">
+        <div class="col-4">
+            <h3>Select image to upload:</h3>
+            <input type="file" name="fileToUpload" id="fileToUpload" required="required">
+        </div>
+        <div class="col-4">
+            <h3>Name a brand:</h3>
+            <input type="text" name="brand" id="brandName" required="required" placeholder="Name of a brand">
+        </div>
+    </div>
+    <div class="row">
+        <label for="submit-button" class="custom-submit">
+            <i class="fa fa-cloud-upload"></i> Upload a brand
+        </label>
+        <input type="submit" value="Upload brand" id="submit-button" name="submit">
+    </div>
 </form>
     <?php $footer = include_once "footer.php";
       echo $footer; ?>
