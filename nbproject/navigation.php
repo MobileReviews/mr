@@ -5,7 +5,7 @@
         exit;
     }
 
-    echo "<ul>";
+    echo "<ul class='ul'>";
     echo "<a class='logo' href='welcome.php'><img src='https://i.imgur.com/JjCj9JC.png'
           alt='logo' height='32' width='100'></a>";
     echo "<li><a class='navlink' href='logout.php'>Logout</a></li>";
