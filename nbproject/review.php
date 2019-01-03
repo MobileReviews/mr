@@ -29,6 +29,7 @@
         $cons = $row['cons'];
         $pros = $row['pros'];
         $size = $row['size'];
+        $color = $row['color'];
         $screen = $row['screen'];
         $camera = $row['camera'];
         $chipset = $row['chipset'];
@@ -81,6 +82,7 @@
             echo "<h3>Main specifications</h3>";
             echo "<div class='container'><ul style='list-style-type:none;'>
             <li><i class='fas fa-arrows-alt'></i><b> Size </b>$size</li>
+            <li><i class='fas fa-palette'></i><b> Colors </b>$color</li>
             <li><i class='fas fa-mobile-alt'></i><b> Screen </b>$screen</li>
             <li><i class='fas fa-camera'></i><b> Camera </b>$camera</li>
             <li><i class='fas fa-microchip'></i><b> Chipset </b>$chipset</li>
