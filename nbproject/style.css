@@ -48,6 +48,13 @@ col-2 {
     position: relative;
 }
 
+.col-6 {
+    display: inline-block;
+    margin: 0 auto;
+    width: 45%;
+    height: 100%;
+}
+
 .col-4 {
     display: inline-block;
     margin: 25px 0px;
@@ -568,22 +575,18 @@ li
     list-style-position: inside;
 }
 /*Review.Pros and cons*/
-.left-half {
-  margin-top: 20px;
+.left-side {
   border-radius: 10px;
-  margin-bottom: 20px;
+  margin: 15px 15px 15px 0px;
+  padding-bottom: 10px;
   background-color: rgba(255, 110, 110, 0.2);
-  left: 0px;
-  width: 48%;
-  float: left;
+  height: 100%;
 }
-.right-half {
-  margin-top: 20px;
+.right-side {
   border-radius: 10px;
-  margin-bottom: 20px;
+  margin: 15px 0px 15px 15px;
+  padding-bottom: 10px;
   background-color: rgba(110, 255, 149, 0.2);
-  float: right;
-  right: 0px;
-  width: 48%;
+  height: 100%;
 }
 p{ text-align: justify;}

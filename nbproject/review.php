@@ -59,7 +59,8 @@
            </iframe></div></div>";
           
            echo "<div class='container'>";
-           echo "<div class='left-half'>";
+           echo "<div class='row'>";
+           echo "<div class='col-6 left-side'>";
            
            echo "<h3><b>Cons</b></h3>";
            echo "<ul style='list-style-type:circle; margin-left: 5px;'>";
@@ -69,7 +70,7 @@
                 }
                 echo"</ul>";
             echo "</div>";
-            echo "<div class='right-half'>";
+            echo "<div class='col-6 right-side'>";
            echo "<h3><b>Pros</b></h3>";
            echo "<ul style='list-style-type:circle; margin-left: 5px;'>";
            $pieces = explode(",", $pros);
@@ -79,8 +80,12 @@
                 echo"</ul>";
                 echo "</div>";
             echo "</div>";
-            echo "<h3>Main specifications</h3>";
-            echo "<div class='container'><ul style='list-style-type:none;'>
+            echo "</div>";
+            
+            
+            echo "<div class='container specs'>
+            <h3>Main specifications</h3>
+            <ul style='list-style-type:none;'>
             <li><i class='fas fa-arrows-alt'></i><b>&nbsp; Size </b>$size</li>
             <li><i class='fas fa-palette'></i><b> &nbsp;Colors </b>$color</li>
             <li><i class='fas fa-mobile-alt'></i><b>&nbsp;&nbsp; Screen </b>$screen</li>
@@ -94,8 +99,7 @@
             
     }
     ?>
-</body>
     <?php $footer = include_once "footer.php";
       echo $footer;?>
-
+</body>
 </html>
