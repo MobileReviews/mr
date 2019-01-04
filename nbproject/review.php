@@ -37,28 +37,43 @@
         $os = $row['os'];
         $battery = $row['battery'];
         
+           echo "<div class='container'>";
+           
            echo "<div class='row'>";
            echo "<h2>$title</h2>";
            echo "</div>";
-           echo "<center><img src='$titlepicture' alt='Title picture' height='400' width='800'></center>";
-           echo "<h3>Camera</h3>";
-           echo "<div class='container'><p>$cameratext</p></div>";
-           echo "<center><img src='$camerapicture' alt='Camera picture' height='400' width='800'></center>";
-           echo "<h3>Display</h3>";
-           echo "<div class='container'><p>$screentext</p></div>";
-           echo "<center><img src='$screenpicture' alt='Screen picture' height='600' width='800'></center>";
-           echo "<h3>Battery</h3>";
-           echo "<div class='container'><p>$batterytext</p></div>";
-           echo "<center><img src='$batterypicture' alt='Battery picture' height='400' width='800'></center>";
-           echo "<h3>Performance</h3>";
-           echo "<div class='container'><p>$performancetext</p></div>";
            
-           echo "<div class='container'>";
+           echo "<div class='review-img'><img src='$titlepicture' alt='Title picture'></div>";
+           
+           echo "<div class='row'>";
+           echo "<h3>Camera</h3>";
+           echo "<p>$cameratext</p>";
+           echo "</div>";
+           
+           echo "<div class='review-img'><img src='$camerapicture' alt='Camera picture'></div>";
+           
+           echo "<div class='row'>";
+           echo "<h3>Display</h3>";
+           echo "<p>$screentext</p>";
+           echo "</div>";
+           
+           echo "<div class='review-img'><img src='$screenpicture' alt='Screen picture'></div>";
+           
+           echo "<div class='row'>";
+           echo "<h3>Battery</h3>";
+           echo "<p>$batterytext</p>";
+           echo "</div>";
+           
+           echo "<div class='review-img'><img src='$batterypicture' alt='Battery picture'></div>";
+           echo "<h3>Performance</h3>";
+           echo "<p>$performancetext</p>";
+           
+           
            echo "<br><div class='videoWrapper' style='float: none;margin: 0 auto'>"
            . "<iframe width='100%' height='inherit' src='https://www.youtube.com/embed/$video' frameborder='0' allowfullscreen>
-           </iframe></div></div>";
+           </iframe></div>";
           
-           echo "<div class='container'>";
+          
            echo "<div class='row'>";
            echo "<div class='col-6 left-side'>";
            
@@ -80,10 +95,10 @@
                 echo"</ul>";
                 echo "</div>";
             echo "</div>";
-            echo "</div>";
             
             
-            echo "<div class='container specs'>
+            
+            echo "<div class='specs'>
             <h3>Main specifications</h3>
             <ul style='list-style-type:none;'>
             <li><i class='fas fa-arrows-alt'></i><b>&nbsp; Size </b>$size</li>
@@ -96,7 +111,7 @@
             <li><i class='fas fa-battery-three-quarters'></i><b>&nbsp; Battery </b>$battery</li>
             </ul></div>";
             
-            
+            echo "</div>";
     }
     ?>
     <?php $footer = include_once "footer.php";

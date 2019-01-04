@@ -590,3 +590,9 @@ li
   height: 100%;
 }
 p{ text-align: justify;}
+
+.review-img img {
+    margin: 25px 0px;
+    width: 1000px; /* you can use % */
+    height: auto;
+}
