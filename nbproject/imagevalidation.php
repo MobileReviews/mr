@@ -2,7 +2,7 @@
 
 function checkImage($image, $directory)
 {
-    $filePath = $directory . basename($_FILES["fileToUpload"]["name"]);
+    $filePath = $directory . basename($image["name"]);
     $imageFileType = strtolower(pathinfo($filePath,PATHINFO_EXTENSION));
     if(getimagesize($image["tmp_name"]) !== false) {
         if (file_exists($filePath)) {

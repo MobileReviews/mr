@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Review</title>
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
@@ -26,10 +26,10 @@
         $batterypicture = $row['battery_picture'];
         $performancetext = $row['performance_text'];
         $video = $row['video'];
+        $color = $row['color'];
         $cons = $row['cons'];
         $pros = $row['pros'];
         $size = $row['size'];
-        $color = $row['color'];
         $screen = $row['screen'];
         $camera = $row['camera'];
         $chipset = $row['chipset'];
@@ -42,16 +42,16 @@
            echo "</div>";
            echo "<center><img src='$titlepicture' alt='Title picture' height='400' width='800'></center>";
            echo "<h3>Camera</h3>";
-           echo $cameratext;
+           echo "<div class='container'><p>$cameratext</p></div>";
            echo "<center><img src='$camerapicture' alt='Camera picture' height='400' width='800'></center>";
            echo "<h3>Display</h3>";
-           echo $screentext;
+           echo "<div class='container'><p>$screentext</p></div>";
            echo "<center><img src='$screenpicture' alt='Screen picture' height='600' width='800'></center>";
            echo "<h3>Battery</h3>";
-           echo $batterytext;
+           echo "<div class='container'><p>$batterytext</p></div>";
            echo "<center><img src='$batterypicture' alt='Battery picture' height='400' width='800'></center>";
            echo "<h3>Performance</h3>";
-           echo $performancetext;
+           echo "<div class='container'><p>$performancetext</p></div>";
            
            echo "<div class='container'>";
            echo "<br><div class='videoWrapper' style='float: none;margin: 0 auto'>"
@@ -81,14 +81,14 @@
             echo "</div>";
             echo "<h3>Main specifications</h3>";
             echo "<div class='container'><ul style='list-style-type:none;'>
-            <li><i class='fas fa-arrows-alt'></i><b> Size </b>$size</li>
-            <li><i class='fas fa-palette'></i><b> Colors </b>$color</li>
-            <li><i class='fas fa-mobile-alt'></i><b> Screen </b>$screen</li>
-            <li><i class='fas fa-camera'></i><b> Camera </b>$camera</li>
-            <li><i class='fas fa-microchip'></i><b> Chipset </b>$chipset</li>
-            <li><i class='fas fa-memory'></i><b> Memory </b>$memory</li>
-            <li><i class='fas fa-server'></i><b> OS </b>$os</li>
-            <li><i class='fas fa-battery-three-quarters'></i><b> Battery </b>$battery</li>
+            <li><i class='fas fa-arrows-alt'></i><b>&nbsp; Size </b>$size</li>
+            <li><i class='fas fa-palette'></i><b> &nbsp;Colors </b>$color</li>
+            <li><i class='fas fa-mobile-alt'></i><b>&nbsp;&nbsp; Screen </b>$screen</li>
+            <li><i class='fas fa-camera'></i><b> &nbsp;Camera </b>$camera</li>
+            <li><i class='fas fa-microchip'></i><b> &nbsp;Chipset </b>$chipset</li>
+            <li><i class='fas fa-memory'></i><b>&nbsp; Memory </b>$memory</li>
+            <li><i class='fas fa-server'></i><b>&nbsp;&nbsp; OS </b>$os</li>
+            <li><i class='fas fa-battery-three-quarters'></i><b>&nbsp; Battery </b>$battery</li>
             </ul></div>";
             
             
